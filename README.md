@@ -1,1 +1,3 @@
-# machine_learning_ufpe_2023
+# Projeto disciplina Aprendizado de Máquina CIn-UFPE 2023.1
+
+Alunos: Matheus Rodrigues de Souza Félix
