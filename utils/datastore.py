@@ -34,6 +34,22 @@ class DataStore:
         '''
         pass
         
+import pandas as pd
+D1
+data.drop(["REGION-CENTROID-ROW","REGION-PIXEL-COUNT","SHORT-LINE-DENSITY-5","RAWRED-MEAN","RAWBLUE-MEAN","RAWGREEN-MEAN","EXRED-MEAN","EXBLUE-MEAN","EXGREEN-MEAN","VALUE-MEAN","SATURATION-MEAN","HUE-MEAN",""], axis=1, inplace=True)
+print(Data)
+
+D2
+data.drop(["REGION-CENTROID-ROW","REGION-PIXEL-COUNT","SHORT-LINE-DENSITY-5","SHORT-LINE-DENSITY-2","VEDGE-MEAN","VEDGE-SD","HEDGE-MEAN","HEDGE-SD","INTENSITY-MEAN"], axis=1, inplace=True)
+print(Data)
+
+D3
+data.drop(["REGION-CENTROID-ROW","REGION-PIXEL-COUNT","SHORT-LINE-DENSITY-5"], axis=1, inplace=True)
+print(data)
+
+
+
+
 
         
     
