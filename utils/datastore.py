@@ -25,27 +25,11 @@ class DataStore:
         dataframes = [pd.read_csv(StringIO(self._etl(endpoint,file))) for file in files]
         self.data = pd.concat(dataframes)
 
-    def create_datasets(self):
-        '''
-        D1 = 
-        D2 = 
-        D3 = 
+    def build_datasets(self):
+        D1 = self.data.iloc[:,4:9]
+        D2 = self.data.iloc[:,10:19]
+        D3 = self.data.iloc[:,4:19]
         return [D1,D2,D3]
-        '''
-        pass
-        
-import pandas as pd
-D1
-data.drop(["REGION-CENTROID-ROW","REGION-PIXEL-COUNT","SHORT-LINE-DENSITY-5","RAWRED-MEAN","RAWBLUE-MEAN","RAWGREEN-MEAN","EXRED-MEAN","EXBLUE-MEAN","EXGREEN-MEAN","VALUE-MEAN","SATURATION-MEAN","HUE-MEAN",""], axis=1, inplace=True)
-print(Data)
-
-D2
-data.drop(["REGION-CENTROID-ROW","REGION-PIXEL-COUNT","SHORT-LINE-DENSITY-5","SHORT-LINE-DENSITY-2","VEDGE-MEAN","VEDGE-SD","HEDGE-MEAN","HEDGE-SD","INTENSITY-MEAN"], axis=1, inplace=True)
-print(Data)
-
-D3
-data.drop(["REGION-CENTROID-ROW","REGION-PIXEL-COUNT","SHORT-LINE-DENSITY-5"], axis=1, inplace=True)
-print(data)
 
 
 
