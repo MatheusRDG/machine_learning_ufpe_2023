@@ -6,7 +6,7 @@ from io import StringIO
 conf = {
     'endpoint': 'https://archive.ics.uci.edu/ml/machine-learning-databases/image/',
     'files': ['segmentation.data','segmentation.test'],
-    'local_datapath': '../local/',
+    'local_datapath': './local/',
     'datafile': 'data.csv',
     'seed': 11
 }
