@@ -49,7 +49,7 @@ class DataStore:
 
     def build_datasets(self):
         """Builds the datasets for the experiments."""
-        partition_1 = self.data.iloc[:, 4:9]
+        partition_1 = self.data.iloc[:, 4:10]
         partition_1["label"] = self.data["label"]
 
         partition_2 = self.data.iloc[:, 10:19]
