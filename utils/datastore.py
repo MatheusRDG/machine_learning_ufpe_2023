@@ -40,19 +40,22 @@ class DataStore:
             ]
             self.data = pd.concat(dataframes)
             self.data["label"] = self.data.index
+
             self.data.reset_index()
+
             self.data.to_csv(filepath)
         else:
             self.data = pd.read_csv(filepath)
 
-    def build_datasets(self, labeled=True):
-        D1 = self.data.iloc[:, 4:9]
-        D2 = self.data.iloc[:, 10:19]
-        D3 = self.data.iloc[:, 4:19]
-        
-        if labeled:
-            D1["label"] = self.data["label"]
-            D2["label"] = self.data["label"]
-            D3["label"] = self.data["label"]
+    def build_datasets(self):
+        """Builds the datasets for the experiments."""
+        partition_1 = self.data.iloc[:, 4:10]
+        partition_1["label"] = self.data["label"]
 
-        return D1, D2, D3
+        partition_2 = self.data.iloc[:, 10:19]
+        partition_2["label"] = self.data["label"]
+
+        partition_3 = self.data.iloc[:, 4:19]
+        partition_3["label"] = self.data["label"]
+
+        return partition_1, partition_2, partition_3
